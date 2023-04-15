@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useAuth } from './AppContext'
+import { useAuth } from '../AppContext'
 
 export default function Header() {
 
@@ -22,7 +22,7 @@ export default function Header() {
     }
 
     return (
-        <div className='header'>
+        <header className='header'>
         <img src='headerImg.png'/>
         <div className='headerInfo'>
             <form onSubmit={(e)=>{e.preventDefault(); handleSearch();}}>
@@ -43,6 +43,6 @@ export default function Header() {
             <h2>Search your favorite book!</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum corrupti repellendus. Suscipit at praesentium voluptatem ex debitis eligendi error iusto temporibus nostrum, provident possimus rerum minima esse. Sunt, doloremque.</p>
         </div>
-        </div>
+        </header>
     )
 }

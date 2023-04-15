@@ -2,6 +2,7 @@ export type AppContextType = {
     books : bookType[],
     dispatch: React.Dispatch<AppActionType>
     query: string;
+    currentBook : bookInfo | null
 }
 
 export type bookType = {
@@ -19,4 +20,19 @@ export type AppActionType = {
         booksPayload?: bookType[],
         queryPayload?: string
     }
+}
+
+export type bookInfo = {
+    status: string;
+    id: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    authors: string;
+    publisher: string;
+    pages: string;
+    year: string;
+    image: string;
+    url: string;
+    download: string;
 }

@@ -63,6 +63,10 @@ html {
   align-items: center;
   font-weight: 500;
   margin-bottom: 0.5rem;
+  background-color: #ffffff;
+  padding: 20px 2rem;
+  box-shadow: 0px 5px 4px #f4f5fd;
+  border: 1px solid transparent;
 }
 
 .navname{
@@ -79,6 +83,9 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+  .navbar{
+    padding: 20px 4rem;
+  }
   nav {
     display: flex;
   }
@@ -101,20 +108,11 @@ nav {
   }
 }
 
-main {
-  padding: 1rem 2rem;
-}
-
-@media screen and (min-width: 768px) {
-  main{
-    padding: 1rem 4rem;
-  }
-}
-
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 2rem;
 }
 
 .headerInfo {
@@ -163,6 +161,7 @@ main {
     flex-direction: row-reverse;
     gap: 1rem;
     margin-top: 2rem;
+    padding: 0 4rem;
   }
 
   .headerInfo {
@@ -177,4 +176,67 @@ main {
   .headerInfo p {
     font-size: 0.7rem;
   }
+}
+
+.bookshelf {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #f4f5fd;
+}
+
+.bookshelf h2{
+  color: #ba8c63;
+  font-size: 1.5rem;
+}
+
+.bookgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .bookgrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .bookshelf{
+    padding: 4rem;
+  }
+
+  .bookshelf h2{
+    font-size: 2rem;
+  }
+  
+  .bookgrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bookgrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.bookgrid img {
+  width: 100%;
+
+}
+
+.bookgrid h3{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ba8c63;
+  margin-top: 1rem;
+}
+
+.bookgrid p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #5b5353;
 }

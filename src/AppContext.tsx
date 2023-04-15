@@ -6,7 +6,8 @@ import { appReducer } from "./appReducer";
 const AppContext = createContext<AppContextType>({
     books: [],
     dispatch : () => {},
-    query: ''
+    query: '',
+    currentBook: null
 })
 
 export const useAuth = () => {
