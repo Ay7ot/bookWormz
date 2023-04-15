@@ -1,19 +1,29 @@
-
+import { useEffect, useState } from "react"
+import Loader from "./Loader"
+import Body from "./Body"
 
 function App() {
 
-  async function fetchBooks(){
-    await fetch('https://www.dbooks.org/api/recent')
+  const [loading, setLoading] = useState(false)
+
+  useEffect(()=>{
+    setLoading(true)
+    fetch(`https://www.dbooks.org/api/recent`)
       .then(res=>res.json())
       .then(data=>{
         console.log(data)
       })
       .catch(err=>console.error(err))
-  }
+      .finally(()=>{
+        setTimeout(()=>{
+          setLoading(false)
+        }, 1000)
+      })
+  },[])
 
   return (
     <div className="App">
-      <button type="button" onClick={fetchBooks}>Get books</button>
+      {loading ? <Loader /> : <Body />}
     </div>
   )
 }
