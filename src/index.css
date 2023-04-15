@@ -1,0 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.App {
+  height: 100dvh;
+  display: grid;
+  place-content: center;
+}
