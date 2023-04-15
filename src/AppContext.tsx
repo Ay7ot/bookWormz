@@ -5,7 +5,8 @@ import { appReducer } from "./appReducer";
 
 const AppContext = createContext<AppContextType>({
     books: [],
-    dispatch : () => {}
+    dispatch : () => {},
+    query: ''
 })
 
 export const useAuth = () => {
@@ -15,7 +16,7 @@ export const useAuth = () => {
 export function AppProvider({children}: {children: ReactNode}){
     
     const [mainstate, dispatch] = useReducer(appReducer, useAuth())
-    
+    console.log(mainstate)
     return (
         <AppContext.Provider value={{...mainstate, dispatch}}>
             {children}

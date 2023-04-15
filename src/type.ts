@@ -1,6 +1,7 @@
 export type AppContextType = {
     books : bookType[],
     dispatch: React.Dispatch<AppActionType>
+    query: string;
 }
 
 export type bookType = {
@@ -15,6 +16,7 @@ export type bookType = {
 export type AppActionType = {
     type: string;
     payload? : {
-        booksPayload: bookType[]
+        booksPayload?: bookType[],
+        queryPayload?: string
     }
 }
