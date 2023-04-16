@@ -55,7 +55,7 @@ export default function Navbar() {
           </li>
         </ul>
       </nav>
-      <div className='toggleIcon' onClick={openNav}>
+      <div className='toggleIcon' onClick={(e)=>{e.stopPropagation(); openNav()}}>
         <i><FaBars /></i>
       </div>
       <NavToggled />
