@@ -1,12 +1,15 @@
+import { FaBars } from 'react-icons/fa'
 import {GiBookshelf} from 'react-icons/gi'
 import {HiHomeModern} from 'react-icons/hi2'
 import {TiContacts} from 'react-icons/ti'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../AppContext'
+import NavToggled from './NavToggled'
 
 export default function Navbar() {
 
   const navigate = useNavigate()
-
+  const {dispatch, navToggled} = useAuth()
   const scrollToSection = (id: string, offset = -70) => {
     
     if(id !== 'footer'){
@@ -24,6 +27,12 @@ export default function Navbar() {
       }
     }
     
+  }
+
+  function openNav(){
+    dispatch({
+      type: 'setNavToggledTrue'
+    })
   }
   
 
@@ -46,6 +55,10 @@ export default function Navbar() {
           </li>
         </ul>
       </nav>
+      <div className='toggleIcon' onClick={openNav}>
+        <i><FaBars /></i>
+      </div>
+      <NavToggled />
     </div>
   )
 }

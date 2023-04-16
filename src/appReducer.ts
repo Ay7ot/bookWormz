@@ -53,6 +53,16 @@ export function appReducer(state: AppContextType, action: AppActionType){
                 ...state,
                 email: ''
             }
+        case 'setNavToggledTrue':
+            return {
+                ...state,
+                navToggled: true
+            }
+        case 'setNavToggledFalse':
+            return {
+                ...state,
+                navToggled: false
+            }
         default :
             return state
     }

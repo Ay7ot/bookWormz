@@ -9,7 +9,7 @@ import Footer from './Footer'
 export default function BookPage() {
     const location = useLocation()
     const data: bookInfo = location.state
-    const {currentBook} = useAuth();
+    const {currentBook, navToggled} = useAuth();
 
     if(!currentBook || currentBook.id !== data.id){
         return <Loader />
@@ -35,10 +35,10 @@ export default function BookPage() {
     }
 
     return (
-        <>
+        <div className={navToggled ? ' noScroll' : ''}>
             <Navbar />
             <BookInfo />
             <Footer />
-        </>
+        </div>
     )
 }

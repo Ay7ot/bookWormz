@@ -11,7 +11,8 @@ const AppContext = createContext<AppContextType>({
     searchLoad: false,
     error: '',
     isLoaded: false,
-    email: ''
+    email: '',
+    navToggled: false
 })
 
 export const useAuth = () => {
