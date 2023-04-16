@@ -7,6 +7,7 @@ export default function Footer() {
 
     const [loading, setLoading] = useState(false)
     const {email, dispatch} = useAuth()
+    
     function subscribe(){
         setLoading(true)
         setTimeout(()=>{
@@ -16,6 +17,7 @@ export default function Footer() {
             setLoading(false)
         }, 3000)
     }
+
     return (
         <footer id='footer'>
             <div className='innerFooter'>

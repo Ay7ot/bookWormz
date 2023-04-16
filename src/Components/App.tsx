@@ -10,7 +10,7 @@ import Bookshelf from "./Bookshelf"
 function App() {
 
   const [loading, setLoading] = useState(false)
-  const { dispatch, books } = useAuth()
+  const { dispatch } = useAuth()
 
   useEffect(()=>{
     setLoading(true)

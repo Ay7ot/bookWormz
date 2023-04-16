@@ -9,7 +9,8 @@ import NavToggled from './NavToggled'
 export default function Navbar() {
 
   const navigate = useNavigate()
-  const {dispatch, navToggled} = useAuth()
+  const {dispatch, } = useAuth()
+  
   const scrollToSection = (id: string, offset = -70) => {
     
     if(id !== 'footer'){

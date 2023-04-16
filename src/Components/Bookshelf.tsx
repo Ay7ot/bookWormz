@@ -1,7 +1,6 @@
 import { useAuth } from '../AppContext'
 import {Link} from 'react-router-dom'
 import Loader2 from './Loader2'
-import Loader from './Loader'
 
 export default function Bookshelf() {
     const { books, searchLoad, dispatch, isLoaded } = useAuth()
@@ -68,7 +67,6 @@ export default function Bookshelf() {
     }
     
     return (
-       
         <section className='bookshelf' id='bookshelf'>
             {isLoaded ?
              <>

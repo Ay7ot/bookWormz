@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useAuth } from '../AppContext'
-import Loader from './Loader2'
 import Loader2 from './Loader2'
 
 export default function Header() {
@@ -93,7 +92,7 @@ export default function Header() {
             {error !== '' && <p className='errorMessage'>Required</p>}
             <h2>Search your favorite book!</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum corrupti repellendus. Suscipit at praesentium voluptatem ex debitis eligendi error iusto temporibus nostrum, provident possimus rerum minima esse. Sunt, doloremque.</p>
-        </div> : <Loader />
+        </div> : <Loader2 />
         }
         </header>
     )
