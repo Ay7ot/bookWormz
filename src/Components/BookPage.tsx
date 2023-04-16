@@ -35,7 +35,7 @@ export default function BookPage() {
     }
 
     return (
-        <div className='noScroll'>
+        <div className={navToggled ? ' noScroll' : ''}>
             <Navbar />
             <BookInfo />
             <Footer />
