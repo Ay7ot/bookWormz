@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { useAuth } from '../AppContext'
+import Loader from './Loader2'
+import Loader2 from './Loader2'
 
 export default function Header() {
 
     const [loading, setLoading] = useState(false)
-    const {query, dispatch, error} = useAuth()
+    const {query, dispatch, error, isLoaded} = useAuth()
 
     async function handleSearch(){
         setLoading(true)
@@ -55,11 +57,19 @@ export default function Header() {
 
     return (
         <header className='header' id='header'>
-        <img 
+        <img
+            onLoad={()=>{
+                setTimeout(()=>{
+                    dispatch({
+                        type: 'setImageLoaded'
+                    })
+                }, 500)
+            }}
             src='headerImg.png'
             alt='Cartoon image of a woman sitting and reading'
         />
-        <div className='headerInfo'>
+        {isLoaded ? 
+            <div className='headerInfo'>
             <form onSubmit={(e)=>{e.preventDefault(); handleSearch();}}>
                 <input 
                     type='text'
@@ -84,7 +94,8 @@ export default function Header() {
             {error !== '' && <p className='errorMessage'>Required</p>}
             <h2>Search your favorite book!</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum corrupti repellendus. Suscipit at praesentium voluptatem ex debitis eligendi error iusto temporibus nostrum, provident possimus rerum minima esse. Sunt, doloremque.</p>
-        </div>
+        </div> : <Loader />
+        }
         </header>
     )
 }

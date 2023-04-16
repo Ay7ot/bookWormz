@@ -4,6 +4,7 @@ import { bookInfo } from '../type'
 import Navbar from './Navbar'
 import { useAuth } from '../AppContext'
 import Loader from './Loader'
+import Footer from './Footer'
 
 export default function BookPage() {
     const location = useLocation()
@@ -37,6 +38,7 @@ export default function BookPage() {
         <>
             <Navbar />
             <BookInfo />
+            <Footer />
         </>
     )
 }

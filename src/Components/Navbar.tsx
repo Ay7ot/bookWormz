@@ -9,12 +9,21 @@ export default function Navbar() {
 
   const scrollToSection = (id: string, offset = -70) => {
     
-    navigate('/')
-    const element = document.getElementById(id);
-    if (element) {
-      const y = element.getBoundingClientRect().top + window.pageYOffset + offset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+    if(id !== 'footer'){
+      navigate('/')
+      const element = document.getElementById(id);
+      if (element) {
+        const y = element.getBoundingClientRect().top + window.pageYOffset + offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        const y = element.getBoundingClientRect().top + window.pageYOffset + offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     }
+    
   }
   
 
@@ -31,7 +40,7 @@ export default function Navbar() {
             <i><GiBookshelf /></i>
             <p>Bookshelf</p>
           </li>
-          <li onClick={()=>{scrollToSection('header')}}  className='navItems'>
+          <li onClick={()=>{scrollToSection('footer')}}  className='navItems'>
             <i><TiContacts /></i>
             <p>Contact</p>
           </li>

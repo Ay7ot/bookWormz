@@ -292,6 +292,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
+  min-height: 90vh;
 }
 
 .bookInfoMain {
@@ -376,3 +377,136 @@ nav {
   }
 
 }
+
+footer {
+  min-height: 300px;
+  background-color: #ba8c63;
+  padding: 2rem;
+}
+
+.innerFooter{
+  background-color: #c3c3c8;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.innerFooter h2 {
+  color: #ba8c63;
+  text-align: center;
+}
+
+.innerFooter p {
+  font-size: 0.8rem;
+  color: white;
+  line-height: 1.3rem;
+  letter-spacing: 0.1px;
+  margin-top: 1rem;
+}
+
+.innerFooter form {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  
+}
+
+.innerFooter form input {
+  padding: 0.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 1rem;
+  outline: none;
+  font-family: 'Inter', 'sans-serif';
+  box-shadow: 0px 3px 2px #808080;
+}
+
+.innerFooter form button {
+  padding: 0.5rem;
+  border: 1px solid #ba8c63;
+  border-radius: 1rem;
+  color: #ffffff;
+  background-color: #ba8c63;
+  font-family: 'Inter', 'sans-serif';
+  box-shadow: 0px 3px 2px #ba8b636b;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.innerFooter form button:hover{
+  transform: translateY(3px);
+  box-shadow: 0px 0px 0px;
+}
+
+.footerButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  justify-content: center;
+}
+
+.footerButtons a {
+  color: #ba8c63;
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
+}
+
+.footerButtons a:hover{
+  color: #46270c;
+  font-size: 1.8rem;
+}
+
+.loaderForm{
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 4rem;
+  }
+
+  .innerFooter form {
+    justify-content: start;
+  }
+
+  .footerButtons{
+    justify-content: start;
+  }
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+  height: 35px;
+  margin: 0 5px;
+  animation-delay: .25s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: .5s;
+}
+
+@keyframes scale-up4 {
+  20% {
+    background-color: #ffff;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+}
+
+

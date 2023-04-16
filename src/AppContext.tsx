@@ -9,7 +9,9 @@ const AppContext = createContext<AppContextType>({
     query: '',
     currentBook: null,
     searchLoad: false,
-    error: ''
+    error: '',
+    isLoaded: false,
+    email: ''
 })
 
 export const useAuth = () => {

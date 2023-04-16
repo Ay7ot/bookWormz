@@ -1,9 +1,10 @@
 import { useAuth } from '../AppContext'
 import {Link} from 'react-router-dom'
 import Loader2 from './Loader2'
+import Loader from './Loader'
 
 export default function Bookshelf() {
-    const { books, searchLoad, dispatch } = useAuth()
+    const { books, searchLoad, dispatch, isLoaded } = useAuth()
 
     const style = {
         textDecoration: 'none'
@@ -64,11 +65,17 @@ export default function Bookshelf() {
     }
     
     return (
+       
         <section className='bookshelf' id='bookshelf'>
-            <h2>Books</h2>
-            {searchLoad ? 
-                <Loader2 /> : 
-                <DisplayedBooks />
+            {isLoaded ?
+             <>
+                <h2>Books</h2>
+                {searchLoad ? 
+                    <Loader2 /> : 
+                    <DisplayedBooks />
+                }
+            </> : 
+            <Loader2 />
             }
         </section>
     )

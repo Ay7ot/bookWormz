@@ -5,6 +5,8 @@ export type AppContextType = {
     currentBook : bookInfo | null,
     searchLoad: boolean;
     error: string;
+    isLoaded: boolean,
+    email: string
 }
 
 export type bookType = {
@@ -22,7 +24,8 @@ export type AppActionType = {
         booksPayload?: bookType[],
         queryPayload?: string,
         errorPayload?: string,
-        currentBookPayload?: bookInfo | null
+        currentBookPayload?: bookInfo | null,
+        emailPayload?: string
     }
 }
 

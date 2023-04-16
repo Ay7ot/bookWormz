@@ -38,6 +38,21 @@ export function appReducer(state: AppContextType, action: AppActionType){
                 ...state,
                 currentBook: action.payload?.currentBookPayload || null
             }
+        case 'setImageLoaded':
+            return {
+                ...state,
+                isLoaded: true
+            }
+        case 'setEmail':
+            return {
+                ...state,
+                email: action.payload?.emailPayload ?? ''
+            }
+        case 'setNoEmail':
+            return {
+                ...state,
+                email: ''
+            }
         default :
             return state
     }
