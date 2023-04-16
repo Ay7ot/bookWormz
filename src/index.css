@@ -533,6 +533,16 @@ footer {
   color: #ba8c63;
 }
 
+.toggledButton {
+  background-color: transparent;
+  padding: 0.5rem;
+  color: #ba8c63;
+  border: 0px solid;
+  font-size: 1.5rem;
+  display: flex;
+  margin-left: 75%;
+}
+
 @media screen and (min-width: 768px) {
   .toggleIcon{
     display: none;

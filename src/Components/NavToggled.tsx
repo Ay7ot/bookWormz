@@ -44,7 +44,7 @@ export default function NavToggled() {
   
     return (
         <div className={navToggled ? 'navToggled' : 'navNone'}>
-            <button onClick={(e)=>{e.stopPropagation(); closeNav()}}><FaTimes /></button>
+            <button className='toggledButton' onClick={(e)=>{e.stopPropagation(); closeNav()}}><FaTimes /></button>
             <nav className='toggled-nav'>
                 <ul>
                 <li onClick={()=>{scrollToSection('header')}} className='navItems'>
