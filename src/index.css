@@ -495,19 +495,15 @@ footer {
   padding: 1rem;
   width: 250px;
   transition: all 0.5s ease-in;
+  display: block;
+  opacity: 1;
 }
 
 .navNone {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: all 0.5s ease-out;
-  z-index: 99999;
-  width: 250px;
-  height: 100vh;
-  padding: 1rem;
-  transform: translateX(250px);
-  background-color: #f4f5fd;
+ width: 0px;
+ position: absolute;
+ opacity: 0;
+ right: 250px;
 }
 
 .toggled-nav {
