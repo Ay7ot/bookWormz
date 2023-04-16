@@ -14,6 +14,9 @@ export default function Bookshelf() {
         dispatch({
             type: 'setSearchLoadTrue'
         })
+        dispatch({
+            type: 'setNavToggledFalse'
+        })
         await fetch(`https://www.dbooks.org/api/book/${id}`)
         .then(res=>res.json())
         .then(data=>{
