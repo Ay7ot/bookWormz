@@ -8,7 +8,7 @@ import { useAuth } from '../AppContext'
 export default function Body() {
   const {navToggled} = useAuth()
   return (
-    <div className={navToggled ? ' noScroll' : ''}>
+    <div className={!navToggled ? ' noScroll' : ''}>
       <Navbar />
       <Header />
       <Bookshelf />
