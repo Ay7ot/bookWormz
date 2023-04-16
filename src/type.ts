@@ -2,7 +2,9 @@ export type AppContextType = {
     books : bookType[],
     dispatch: React.Dispatch<AppActionType>
     query: string;
-    currentBook : bookInfo | null
+    currentBook : bookInfo | null,
+    searchLoad: boolean;
+    error: string;
 }
 
 export type bookType = {
@@ -18,7 +20,9 @@ export type AppActionType = {
     type: string;
     payload? : {
         booksPayload?: bookType[],
-        queryPayload?: string
+        queryPayload?: string,
+        errorPayload?: string,
+        currentBookPayload?: bookInfo | null
     }
 }
 

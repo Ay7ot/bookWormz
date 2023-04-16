@@ -7,7 +7,9 @@ const AppContext = createContext<AppContextType>({
     books: [],
     dispatch : () => {},
     query: '',
-    currentBook: null
+    currentBook: null,
+    searchLoad: false,
+    error: ''
 })
 
 export const useAuth = () => {

@@ -2,6 +2,10 @@ import { useEffect, useState } from "react"
 import Loader from "./Loader"
 import Body from "./Body"
 import {useAuth} from '../AppContext'
+import { Route, Routes } from "react-router-dom"
+import BookPage from "./BookPage"
+import Header from "./Header"
+import Bookshelf from "./Bookshelf"
 
 function App() {
 
@@ -29,9 +33,17 @@ function App() {
   },[])
 
   return (
-      <div className="App">
-        {loading ? <Loader /> : <Body />}
-      </div>
+    <div className="App">
+      {loading ? <Loader /> :
+        <Routes>
+          <Route path="/" element={<Body />}>
+            <Route path="/header" element={<Header />} />
+            <Route path="/bookshelf" element={<Bookshelf />} />
+          </Route>
+          <Route path="/boardpage" element={<BookPage />} />
+        </Routes>
+      }
+    </div>
   )
 }
 
