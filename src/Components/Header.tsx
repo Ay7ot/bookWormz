@@ -20,7 +20,7 @@ export default function Header() {
         } else {
             const element = document.getElementById('bookshelf');
             if (element) {
-              const y = element.getBoundingClientRect().top + window.pageYOffset + -40;
+              const y = element.getBoundingClientRect().top + window.pageYOffset + -60;
               window.scrollTo({ top: y, behavior: 'smooth' });
             }
 
@@ -30,7 +30,6 @@ export default function Header() {
             await fetch(`https://www.dbooks.org/api/search/${query}`)
                 .then(res=>res.json())
                 .then(data => {
-                    console.log(data)
                     dispatch({
                         type: 'setBooks',
                         payload: {
