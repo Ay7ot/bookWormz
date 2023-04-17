@@ -23,7 +23,3 @@ Once you have started the application, you will be able to search for books by e
 
 ## Contributing
 If you would like to contribute to Bookwormz, feel free to submit a pull request. Before submitting a pull request, please make sure that your changes are in line with the goals of the project and that you have tested your changes thoroughly.
-
-
-## Acknowledgments
-This app was inspired by the Kanban methodology and built using various open-source libraries and tools, including React, Node.js, Firebase and Tailwind. We would like to thank the developers and contributors of these projects for making them available to the community.
