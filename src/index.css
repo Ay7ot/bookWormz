@@ -510,7 +510,8 @@ footer {
  width: 0px;
  position: absolute;
  opacity: 0;
- right: 250px;
+ right: 0px;
+ overflow-x: hidden;
 }
 
 .toggled-nav {
