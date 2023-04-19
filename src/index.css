@@ -508,10 +508,14 @@ footer {
 
 .navNone {
  width: 0px;
+ z-index: 99999;
+ height: 100vh;
  position: absolute;
- opacity: 0;
+ opacity: 1;
+ transition: all 0.5s ease-out;
  right: 0px;
  overflow-x: hidden;
+ transform: translateX(250px);
 }
 
 .toggled-nav {
