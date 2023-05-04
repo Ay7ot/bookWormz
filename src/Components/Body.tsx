@@ -13,6 +13,7 @@ export default function Body() {
       type: 'setNavToggledFalse'
     })
   },[])
+  
   return (
     <div className={navToggled ? ' noScroll' : ''}>
       <Navbar />
